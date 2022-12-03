@@ -1,21 +1,68 @@
-<input value="hello" class="hello-message-input" id="hello-massage" />
+<input value='Ivan' class='first-name-input default-input' id='first-name' />
+<input value='Krotov' class='last-name-input default-input' id='last-name' />
+<input value='SPB' class='adress default-input' id='adress' />
 
-<h1>Пикап</h1>
+<select id='cities'>
+    <option>Kiev</option>
+    <option selected='selected'>Minsk</option>
+    <option>Moskow</option>
+</select>
+
+<textarea id="hobbies">JS, CSS, HTML</textarea>
+
+<div id='avatar-wrapper'>
+    <img id='image'
+        src='https://sun9-west.userapi.com/sun9-55/s/v1/ig2/J-yOX3eQ5CZLuVSrraTmxtFa59lSXVpTZJkUSPDvs6R0Z95Jpg4OutNz0oo6eD4i9gAVuikTjNlIOjeDh_mFq5yq.jpg?size=400x400&quality=96&crop=144,144,1152,1152&ava=1'
+        alt='image'>
+
+</div>
+
 
 <script>
 
-    var helloMassageElement;
-    var helloMessageId;
+    var firstNameId = 'first-name';
+    var firstNameEl = document.getElementById(firstNameId);
+    var lastNameId = 'last-name';
+    var lastNameEl = document.getElementById(lastNameId)
+    var adressId = 'adress';
+    var adressEl = document.getElementById(adressId);
+    var citiesId = 'cities';
+    var citiesEl = document.getElementById(citiesId);
+    var hobbiesID = 'hobbies'
+    var hobbiesEl = document.getElementById(hobbiesID);
+    var avatarWrapperID = 'avatar-wrapper'
+    var avatarWrapperEl = document.getElementById(avatarWrapperID);
+    var imageID = 'image'
+    var imageEl = document.getElementById(imageID);
 
-    helloMessageId = 'hello-massage';
 
-    helloMassageElement = document.getElementById(helloMessageId);
 
-    
-    
-    window.alert(helloMassageElement.value);
-    window.alert(helloMassageElement.id);
-    window.alert(helloMassageElement.className);
+
+    // window.alert(firstNameEl.value);
+    // window.alert(lastNameEl.value);
+    // window.alert(adressEl.value);
+
+
+    firstNameEl.value = 'Andrey'
+    //lastNameEl.setAttribute('value', 'kamasutra');
+
+
+    // window.alert(lastNameEl.className);
+
+    lastNameEl.className = 'last-name-input error-input default-input '
+
 
 
 </script>
+
+
+<style>
+    .default-input {
+        border: green 5px solid;
+        padding: 5px;
+    }
+
+    .error-input {
+        border-color: brown;
+    }
+</style>
